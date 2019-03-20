@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="ad0357181b3f23c02d60404ead4bcb57" sys_domain="global" table="x_pinr_wsc_wsc_task_well" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>702b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_task.number</element>
+            <position>1</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>f02b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_task.short_description</element>
+            <position>2</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>742b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_task.active</element>
+            <position>3</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>f42b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>782b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_task.wsc_request.number</element>
+            <position>5</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>f82b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>well</element>
+            <position>6</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>7c2b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>land_comments</element>
+            <position>7</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>fc2b6a2c1b447f002d60404ead4bcb5d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>engineer_comments</element>
+            <position>8</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:31:59</sys_created_on>
+            <sys_id>702b6a2c1b447f002d60404ead4bcb5e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wsc_task_well" sys_domain="global" view="Default view">ad0357181b3f23c02d60404ead4bcb57</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:31:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_pinr_wsc_wsc_task_well</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-19 14:32:04</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>ad0357181b3f23c02d60404ead4bcb57</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_pinr_wsc_wsc_task_well</sys_name>
+            <sys_overrides display_value="">global</sys_overrides>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_ui_section_ad0357181b3f23c02d60404ead4bcb57</sys_update_name>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-19 14:32:04</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

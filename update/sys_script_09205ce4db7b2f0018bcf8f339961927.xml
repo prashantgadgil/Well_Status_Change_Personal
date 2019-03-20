@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_label/>
+        <action_name/>
+        <action_query>false</action_query>
+        <action_run_at>server</action_run_at>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <application/>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_pinr_wsc_wsc_task</collection>
+        <condition/>
+        <description>This business rule inserts/updates the WSC Task Well with the land and engineering comments whenever the task is updated or inserted.</description>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>WSC Task Inserted or Completed</name>
+        <onclick/>
+        <order>100</order>
+        <priority>100</priority>
+        <read_access_action>false</read_access_action>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+	// Add your code here
+	if(current.operation() == "insert") {
+		// delete any existing wsc task wells;  useful when the task is reopened in rejection loop. it will get fresh list from request well
+		var grexisting = new GlideRecord("x_pinr_wsc_wsc_task_well");
+		grexisting.addQuery("wsc_task", current.sys_id);
+		grexisting.query();
+		gs.error( " WSC - Deleting existing wsc task wells row count = " + grexisting.getRowCount());
+		grexisting.deleteMultiple();
+
+		// get all the wsc request wells, and insert them as wsc task wells.
+		var grx = new GlideRecord("x_pinr_wsc_wsc_request_well");
+		grx.addQuery("wsc_request", current.wsc_request);
+		grx.query();
+		while (grx.next()) {
+			var gr = new GlideRecord("x_pinr_wsc_wsc_task_well");
+			gr.newRecord();
+			gr.initialize();
+			gr.wsc_task = current.sys_id;
+			gr.well = grx.well;
+			gr.land_comments = grx.land_comments;
+			gr.engineer_comments = grx.engineer_comments;
+ 			gr.insert();
+		}
+	} 
+	else if(current.operation() == "update" & (current.approval_status == "Approved" | current.approval_status == "Rejected")) {
+		var grWell2 = new GlideRecord('x_pinr_wsc_wsc_task_well');
+		grWell2.addQuery("wsc_task", current.sys_id);
+		grWell2.query();
+		
+		var cntW = 1;
+		while(grWell2.next()){
+			var grRW = new GlideRecord('x_pinr_wsc_wsc_request_well');
+			grRW.addQuery("wsc_request", current.wsc_request.sys_id);
+			grRW.addQuery("well", grWell2.well);
+			grRW.query();
+			var cnt = 1;
+			while(grRW.next()) {
+					grRW.engineer_comments = grWell2.engineer_comments ;
+					grRW.land_comments = grWell2.land_comments;
+				grRW.update();
+			}
+		}
+	}
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>rosen768</sys_created_by>
+        <sys_created_on>2019-02-19 19:26:12</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>09205ce4db7b2f0018bcf8f339961927</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>WSC Task Inserted or Completed</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_script_09205ce4db7b2f0018bcf8f339961927</sys_update_name>
+        <sys_updated_by>rosen768</sys_updated_by>
+        <sys_updated_on>2019-03-13 20:18:52</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+</record_update>

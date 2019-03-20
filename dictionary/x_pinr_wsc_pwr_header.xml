@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="PWR Header" max_length="40" name="x_pinr_wsc_pwr_header" type="collection">
+        <element label="API" max_length="40" name="api" type="string"/>
+        <element label="COMP_SK" max_length="40" name="comp_sk" type="string"/>
+        <element label="Failure Date" max_length="40" name="failure_date" type="glide_date"/>
+        <element label="Status" max_length="40" name="status" type="string"/>
+        <element label="Sub Status" max_length="40" name="sub_status" type="string"/>
+        <element label="Well Name" max_length="40" name="well_name" type="string"/>
+    </element>
+</database>

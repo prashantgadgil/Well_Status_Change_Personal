@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sysevent_email_action">
+    <sysevent_email_action action="INSERT_OR_UPDATE">
+        <action_insert>true</action_insert>
+        <action_update>true</action_update>
+        <active>true</active>
+        <advanced_condition/>
+        <affected_field_on_event/>
+        <category display_value="Uncategorized" name="Uncategorized">c97d83137f4432005f58108c3ffa917a</category>
+        <collection>x_pinr_wsc_wsc_request</collection>
+        <condition/>
+        <content_type>text/html</content_type>
+        <default_interval/>
+        <description>New WSC Request submitted</description>
+        <digest_from/>
+        <digest_html/>
+        <digest_reply_to/>
+        <digest_separator_html/>
+        <digest_separator_text/>
+        <digest_subject/>
+        <digest_template/>
+        <digest_text/>
+        <digestable>false</digestable>
+        <event_name>x_pinr_wsc.WSC_Request_Approved</event_name>
+        <event_parm_1>false</event_parm_1>
+        <event_parm_2>false</event_parm_2>
+        <exclude_delegates>false</exclude_delegates>
+        <force_delivery>false</force_delivery>
+        <from/>
+        <generation_type>event</generation_type>
+        <group/>
+        <group_field/>
+        <importance/>
+        <include_attachments>false</include_attachments>
+        <item>event.parm1</item>
+        <item_table/>
+        <list/>
+        <list_field/>
+        <mandatory>false</mandatory>
+        <message/>
+        <message_html><![CDATA[<table style="width: 100%; border-collapse: collapse;" border="0" width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr style="height: 15pt;">
+<td style="background: #00407a; border-width: 1pt; border-style: solid; border-color: #00407a #00407a #ccd9e4; padding: 0in 7.5pt 0in 3.75pt; height: 15pt;" colspan="4">
+<p style="margin: 0in 0in 0pt;"><strong><span style="color: #bfcfde; font-family: 'Arial',sans-serif; font-size: 10pt;">Well Status Change Process Notification </span></strong></p>
+</td>
+</tr>
+<tr style="height: 14.25pt;">
+<td style="background: white; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 #ccd9e4 #ccd9e4; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" colspan="4">
+<p style="margin: 0in 0in 0pt;"><strong><span style="color: #00407a; font-family: 'Arial',sans-serif; font-size: 8.5pt;">This email confirms that a well status change form you submitted has been approved and is complete.&nbsp;</span></strong></p>
+</td>
+</tr>
+<tr style="height: 14.25pt;">
+<td style="background: #e5ecf1; border-width: 0px 1pt 1pt; border-style: none solid solid; border-color: #000000 #ccd9e4 #ccd9e4; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">
+<p style="margin: 0in 0in 0pt;"><strong><span style="color: #00407a; font-family: 'Arial',sans-serif; font-size: 8.5pt;">Change Date</span></strong></p>
+</td>
+<td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 #ccd9e4 #ccd9e4 #000000; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">
+<p style="margin: 0in 0in 0pt;"><strong><span style="color: #00407a; font-family: 'Arial',sans-serif; font-size: 8.5pt;">${change_date}<br /></span></strong></p>
+</td>
+<td style="background: #e5ecf1; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 #ccd9e4 #ccd9e4 #000000; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">
+<p style="margin: 0in 0in 0pt;"><strong><span style="color: #00407a; font-family: 'Arial',sans-serif; font-size: 8.5pt;">New Status</span></strong></p>
+</td>
+<td style="background: white; border-width: 0px 1pt 1pt 0px; border-style: none solid solid none; border-color: #000000 #ccd9e4 #ccd9e4 #000000; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">
+<p style="margin: 0in 0in 0pt;"><strong><span style="color: #00407a; font-family: 'Arial',sans-serif; font-size: 8.5pt;">${new_well_status.display_name}<br /></span></strong></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p style="margin: 0in 0in 0pt;"><span style="font-family: 'Arial',sans-serif; font-size: 8.5pt; display: none;">&nbsp;</span></p>
+<p style="margin: 0in 0in 0pt;">&nbsp;</p>
+<p style="margin: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="font-size: 10pt; font-family: 'Courier New'; color: black;">${mail_script:wsc_request_urgent_warning}</span></p>
+<p style="margin: 0px; color: #222222; font-family: Arial, Helvetica, sans-serif; font-size: small;"><span style="font-size: 10pt; font-family: 'Courier New'; color: black;">${mail_script:wsc_request_table_summary}</span></p>]]></message_html>
+        <message_list/>
+        <message_text/>
+        <name>WSC Request Approved Notification</name>
+        <omit_watermark>false</omit_watermark>
+        <order/>
+        <push_message_only>false</push_message_only>
+        <recipient_fields>opened_by</recipient_fields>
+        <recipient_groups/>
+        <recipient_users/>
+        <reply_to/>
+        <send_self>true</send_self>
+        <sms_alternate/>
+        <style/>
+        <subject>WSC Well Status Change Complete: ${number}</subject>
+        <subscribable>false</subscribable>
+        <sys_class_name>sysevent_email_action</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-11 19:20:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>636887351b6be3802d60404ead4bcbc5</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>WSC Request Approved Notification</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sysevent_email_action_636887351b6be3802d60404ead4bcbc5</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-02-11 19:30:27</sys_updated_on>
+        <sys_version>2</sys_version>
+        <template display_value="WSC General Overview">a3ed13b413432700dd9251522244b0fa</template>
+        <type>email</type>
+        <user/>
+        <user_field/>
+        <weight>0</weight>
+    </sysevent_email_action>
+</record_update>

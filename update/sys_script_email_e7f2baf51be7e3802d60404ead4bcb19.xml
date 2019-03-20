@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>wsc_request_rejected_notification</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+          /* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+          /* Optional GlideRecord */ event) {
+
+	gs.error("Event first param = " + event.parm1);
+
+	var payload = JSON.parse(event.parm1);
+
+	email.setSubject("WSC Well Status Rejected: " +  payload.wsc_request_number);
+
+	template.print("This email is to inform you that a well status change under review has been rejected by a reviewer. You are receiving this message because you are involved in this well status change either as the originator or as a reviewer.<br><br>");
+
+	template.print("<b> Well Status Change Details: </b><br>");
+	template.print("<b>WSC Request Number:</b>" + payload.wsc_request_number + "<br>");
+	template.print("<b>Well(s):</b>" + payload.well_names + "<br>");
+	template.print("<b>From:</b>" + payload.from_status + "<br>");
+	template.print("<b>To:</b>" + payload.to_status + "<br>");
+	template.print("<b>On:</b>" + payload.change_date + "<br>");
+
+	template.print("<br><br>"); 	
+	template.print("Footer:<br>"); 	
+	if (gs.getProperty("instance_name") != "pioneer") {
+		template.print("If this email had been sent in production, it would have gone to the following recipient email addresses:<br>") ;
+		template.print(payload.mailing_list+ "<br>");
+	}
+
+	
+})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-11 17:47:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>e7f2baf51be7e3802d60404ead4bcb19</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>wsc_request_rejected_notification</sys_name>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_script_email_e7f2baf51be7e3802d60404ead4bcb19</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-02-11 18:59:23</sys_updated_on>
+    </sys_script_email>
+</record_update>

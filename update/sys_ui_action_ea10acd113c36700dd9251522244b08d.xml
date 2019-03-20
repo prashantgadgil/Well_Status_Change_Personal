@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name>Populate Well Data</action_name>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments>If the request is in Draft status and was opened by the current user – then if there is a well selected it will extract the well data for that well and set the following fields on the request from that well data (if more than one well was specified, then it will use the data from the first well that user selected):&#13;
+Current Well Status (From status), Area, Division, API, County, Foreman, Lease Operator (Pumper), Formation, Well Type&#13;
+</comments>
+        <condition>current.request_status == "Draft" &amp;&amp; current.opened_by == gs.getUserID()</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>This will populate in the form data from the specified well(s). If multiple wells are selected, first well will be used to pull data.</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Populate Well Data</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[//gs.info("JR Test inside Select Well Data!");
+//g_form.checkMandatory = false;
+var wsc_table = current;
+var list = current.wells.toString();
+var array = list.split(",");
+//gs.info("array len: " + array.length);
+if(array.length >= 1) {
+	current.is_single_well_change = false;
+	gs.info("[" + 0 + "]: well reference: " + array[0]);
+	var gr = new GlideRecord('x_pinr_wsc_wsc_request_well');
+	gr.newRecord();
+	gr.initialize();
+	gr.well = array[0];
+	// 	gs.info("[" + 0 + "]: well: " +  gr.well);
+	//	gs.info("[" + 0 + "]: well status: " +  gr.well.well_status);
+	//	gs.info("[" + 0 + "]: well status display name: " + gr.well.well_status.display_name);
+	
+	// 	var grws = new GlideRecord('x_pinr_wells_confi_well_status');
+	// 	grws.newRecord();
+	// 	grws.initialize();
+	// 	grws.well_status= gr.well.well_status;
+	// 	gs.info("Well status display name: " + grws.well_status.display_name);
+	current.from_status =  gr.well.well_status;
+	current.current_status = gr.well.well_status;
+	current.area = gr.well.area;
+	current.division = gr.well.division;
+	current.api = gr.well.api;
+	current.county = gr.well.county;
+	current.foreman = gr.well.foreman;
+	//current.pumper = gr.well.pumper;
+	current.lease_operator = gr.well.pumper;
+	current.formation = gr.well.formation;
+	current.swd = false;
+	current.oil = false;
+	current.gas = false;
+	current.gas_lift = false;
+	if(gr.well.well_type == "WELLSWD") {
+		current.swd = true;
+	} else if(gr.well.well_type == "WELLOIL") {
+		current.oil = true;
+	} else if(gr.well.well_type == "WELLGAS") {
+		current.gas = true;
+	} else if(gr.well.well_type == "WELLINJ") {
+		current.gas_lift = true;
+	} else {
+		current.status_change_other = gr.well.well_type;
+	}
+	current.debug_comments = "well_type: " + gr.well.well_type +  "area: " + gr.well.area + "; area name: " + gr.well.area.name + "; field: " + gr.well.field + "; foreman: " + gr.well.foreman + "; foreman name: " + gr.well.foreman.name + "; Formation: " + gr.well.formation + ";";
+	current.insert();
+	
+} else {
+	current.is_single_well_change = false;
+	current.update();
+}
+action.setRedirectURL(wsc_table);
+]]></script>
+        <show_insert>true</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>rosen768</sys_created_by>
+        <sys_created_on>2019-01-15 21:23:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>ea10acd113c36700dd9251522244b08d</sys_id>
+        <sys_mod_count>55</sys_mod_count>
+        <sys_name>Populate Well Data</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_ui_action_ea10acd113c36700dd9251522244b08d</sys_update_name>
+        <sys_updated_by>rosen768</sys_updated_by>
+        <sys_updated_on>2019-03-13 22:27:06</sys_updated_on>
+        <table>x_pinr_wsc_wsc_request</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

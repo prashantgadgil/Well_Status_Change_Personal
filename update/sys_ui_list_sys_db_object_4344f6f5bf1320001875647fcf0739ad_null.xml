@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" table="sys_dictionary" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>name</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>eb02f023db48378018bcf8f339961994</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>active</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>6302f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>array</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>e302f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>array_denormalized</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>6702f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>attributes</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>e702f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>audit</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>6b02f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>calculation</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>6</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>eb02f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>choice</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>7</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>6f02f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>choice_field</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>8</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>ef02f023db48378018bcf8f339961995</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>choice_table</element>
+            <list_id display_value="sys_dictionary" element="NULL" name="sys_dictionary" parent="sys_db_object" relationship="4344f6f5bf1320001875647fcf0739ad" sys_domain="global" view="Default view">af02f023db48378018bcf8f339961993</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>9</position>
+            <sum>false</sum>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-03-13 15:24:44</sys_created_on>
+            <sys_id>6302f023db48378018bcf8f339961996</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2019-03-13 15:24:44</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>sys_dictionary</name>
+            <parent>sys_db_object</parent>
+            <position/>
+            <relationship display_value="Table Columns">4344f6f5bf1320001875647fcf0739ad</relationship>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-06 15:02:01</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>45aa859413962f00dd9251522244b0aa</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sys_dictionary</sys_name>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_ui_list_sys_db_object_4344f6f5bf1320001875647fcf0739ad_null</sys_update_name>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-06 15:02:01</sys_updated_on>
+            <sys_user display_value="Rosenberg, Jay">16975829dbce2f444a775bd2ca961972</sys_user>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>

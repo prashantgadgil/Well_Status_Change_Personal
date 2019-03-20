@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WSC Task Well" max_length="40" name="x_pinr_wsc_wsc_task_well" type="collection">
+        <element label="Engineer Comments" max_length="1000" name="engineer_comments" type="string"/>
+        <element label="Land Comments" max_length="1000" name="land_comments" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Well" max_length="32" name="well" read_only="true" reference="x_pinr_wells_data_well" type="reference"/>
+        <element label="WSC Task" max_length="32" name="wsc_task" read_only="true" reference="x_pinr_wsc_wsc_task" type="reference"/>
+        <index name="index">
+            <element name="wsc_task"/>
+        </index>
+        <index name="index2">
+            <element name="well"/>
+        </index>
+    </element>
+</database>

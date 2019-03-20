@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="a49cb7b01b6faf402d60404ead4bcbf7" sys_domain="global" table="x_pinr_wsc_wdtr_configuration" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>51edf6f01b77e3c02d60404ead4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>user</element>
+            <position>1</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>19edf6f01b77e3c02d60404ead4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>name</element>
+            <position>2</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>99edf6f01b77e3c02d60404ead4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>run_status</element>
+            <position>3</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>1dedf6f01b77e3c02d60404ead4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_run_on</element>
+            <position>4</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>9dedf6f01b77e3c02d60404ead4bcb9e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>11edf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>division</element>
+            <position>6</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>91edf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>area</element>
+            <position>7</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>15edf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>unit</element>
+            <position>8</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>95edf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>foreman</element>
+            <position>9</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>19edf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>pumper</element>
+            <position>10</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>99edf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>excluded_statuses</element>
+            <position>11</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>1dedf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_reported_after</element>
+            <position>12</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>9dedf6f01b77e3c02d60404ead4bcb9f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>last_reported_before</element>
+            <position>13</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-21 02:16:42</sys_created_on>
+            <sys_id>11edf6f01b77e3c02d60404ead4bcba0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_pinr_wsc_wdtr_configuration" sys_domain="global" view="Default view">a49cb7b01b6faf402d60404ead4bcbf7</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-21 02:16:42</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_pinr_wsc_wdtr_configuration</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-08 20:34:50</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>a49cb7b01b6faf402d60404ead4bcbf7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_pinr_wsc_wdtr_configuration</sys_name>
+            <sys_overrides display_value="">global</sys_overrides>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_ui_section_a49cb7b01b6faf402d60404ead4bcbf7</sys_update_name>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-08 20:34:50</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

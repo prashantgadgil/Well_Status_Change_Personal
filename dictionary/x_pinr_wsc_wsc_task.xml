@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="WSC Task" max_length="40" name="x_pinr_wsc_wsc_task" sizeclass="75" type="collection">
+        <element choice="1" label="Approval Status" max_length="40" name="approval_status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Approved" sequence="0" value="Approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="1" value="Rejected"/>
+            </choice>
+        </element>
+        <element label="WSC Request" max_length="32" name="wsc_request" reference="x_pinr_wsc_wsc_request" reference_cascade_rule="delete" type="reference"/>
+        <index name="index">
+            <element name="wsc_request"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="WSC Request" max_length="40" name="x_pinr_wsc_wsc_request" sizeclass="51" type="collection">
+        <element label="API" max_length="40" name="api" type="string"/>
+        <element label="Area" max_length="32" name="area" reference="x_pinr_wells_confi_area" type="reference"/>
+        <element label="BLM  Date" max_length="40" name="blm_date" type="glide_date"/>
+        <element label="BOPD" max_length="20" name="bopd" type="decimal"/>
+        <element label="BSW" max_length="20" name="bsw" type="decimal"/>
+        <element label="BWPD" max_length="20" name="bwpd" type="decimal"/>
+        <element label="Cancel Account" max_length="40" name="cancel_account" type="boolean"/>
+        <element label="Cessation Days" max_length="40" name="cessation_days" type="integer"/>
+        <element label="Change Date" max_length="40" name="change_date" type="glide_date"/>
+        <element label="Choke" max_length="20" name="choke" type="decimal"/>
+        <element label="CIBP for TA" max_length="40" name="cibp_for_ta" type="string"/>
+        <element label="County" max_length="32" name="county" read_only="true" reference="x_pinr_wells_confi_county" type="reference"/>
+        <element label="CP" max_length="20" name="cp" type="decimal"/>
+        <element label="Critical Date" max_length="40" name="critical_date" type="glide_date"/>
+        <element label="Current Status" max_length="32" name="current_status" reference="x_pinr_wells_confi_well_status" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Date Notified" max_length="40" name="date_notified" type="glide_date"/>
+        <element label="Debug Comments" max_length="2000" name="debug_comments" type="string"/>
+        <element label="Division" max_length="32" name="division" read_only="true" reference="x_pinr_wells_confi_division" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Downtime Code" max_length="32" name="downtime_code" reference="x_pinr_wells_confi_downtime_code" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Engineer" max_length="32" name="engineer" reference="sys_user" reference_qual="active=true^u_person_type=C^ORu_person_type=E^EQ" reference_qual_condition="active=true^u_person_type=C^ORu_person_type=E^EQ" type="reference"/>
+        <element label="Engineer Approval Status" max_length="40" name="engineer_approval_status" read_only="true" type="string"/>
+        <element label="Engineer Comments" max_length="1000" name="engineer_comments" type="string"/>
+        <element label="ESP" max_length="40" name="esp" type="boolean"/>
+        <element label="Federal Well" max_length="40" name="federal_well" type="boolean"/>
+        <element label="Field Office" max_length="32" name="field_office" reference="x_pinr_wells_confi_field_office" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Field Operations Remarks" max_length="1000" name="field_operations_remarks" type="string"/>
+        <element label="First Production Date" max_length="40" name="first_production_date" type="glide_date"/>
+        <element label="Flowing" max_length="40" name="flowing" type="boolean"/>
+        <element label="Foreman" max_length="32" name="foreman" reference="sys_user" reference_qual="active=true^u_person_type=C^ORu_person_type=E^EQ" reference_qual_condition="active=true^u_person_type=C^ORu_person_type=E^EQ" type="reference"/>
+        <element label="Formation" max_length="40" name="formation" type="string"/>
+        <element label="From Status" max_length="32" name="from_status" reference="x_pinr_wells_confi_well_status" type="reference"/>
+        <element label="FTP" max_length="20" name="ftp" type="decimal"/>
+        <element label="Gas" max_length="40" name="gas" type="boolean"/>
+        <element label="Gas Lift" max_length="40" name="gas_lift" type="boolean"/>
+        <element label="GL" max_length="20" name="gl" type="decimal"/>
+        <element label="GOR" max_length="20" name="gor" type="decimal"/>
+        <element label="Grav" max_length="20" name="grav" type="decimal"/>
+        <element choice="1" label="HBP" max_length="40" name="hbp" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Yes" sequence="0" value="Yes"/>
+                <element inactive_on_update="false" label="No" sequence="1" value="No"/>
+            </choice>
+        </element>
+        <element label="Infill Well" max_length="40" name="infill_well" type="boolean"/>
+        <element default="true" label="Is Single Well Change" max_length="40" name="is_single_well_change" type="boolean"/>
+        <element label="Landman" max_length="32" name="landman" reference="sys_user" reference_qual="active=true^u_person_type=E^ORu_person_type=C^EQ" reference_qual_condition="active=true^u_person_type=E^ORu_person_type=C^EQ" type="reference"/>
+        <element label="Landman Approval Status" max_length="40" name="landman_approval_status" read_only="true" type="string"/>
+        <element label="Landtech Approval Status" max_length="40" name="landtech_approval_status" read_only="true" type="string"/>
+        <element label="Land Comments" max_length="1000" name="land_comments" type="string"/>
+        <element label="Last Production Date" max_length="40" name="last_production_date" type="glide_date"/>
+        <element label="Leasehold At Risk" max_length="40" name="leasehold_at_risk" type="boolean"/>
+        <element label="Lease Operator" max_length="32" name="lease_operator" read_only="true" reference="sys_user" reference_qual="active=true^u_person_type=C^ORu_person_type=E^EQ" reference_qual_condition="active=true^u_person_type=C^ORu_person_type=E^EQ" type="reference"/>
+        <element label="MCFD" max_length="20" name="mcfd" type="decimal"/>
+        <element label="Meter Num" max_length="40" name="meter_num" type="string"/>
+        <element label="New Well Status" max_length="32" name="new_well_status" reference="x_pinr_wells_confi_well_status" reference_qual="active=true^EQ" reference_qual_condition="active=true^EQ" type="reference"/>
+        <element label="Offset Well" max_length="4000" name="offset_well" reference="x_pinr_wells_data_well" type="glide_list"/>
+        <element label="Oil" max_length="40" name="oil" type="boolean"/>
+        <element label="Old Formation Name" max_length="40" name="old_formation_name" type="string"/>
+        <element label="Old Formation Prop Num" max_length="40" name="old_formation_prop_num" type="string"/>
+        <element choice="1" label="Old Formation Status" max_length="40" name="old_formation_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="TA" sequence="0" value="TA"/>
+                <element inactive_on_update="false" label="PA" sequence="1" value="PA"/>
+                <element inactive_on_update="false" label="None" sequence="2" value="None"/>
+            </choice>
+        </element>
+        <element label="PA Agreement" max_length="40" name="pa_agreement" type="boolean"/>
+        <element label="Priority Reason" max_length="400" name="priority_reason" type="string"/>
+        <element label="Pumping" max_length="40" name="pumping" type="boolean"/>
+        <element label="Recompletion Date" max_length="40" name="recompletion_date" type="glide_date"/>
+        <element label="Repaired Into WSC Request" max_length="32" name="repaired_into_wsc_request" read_only="true" reference="x_pinr_wsc_wsc_request" type="reference"/>
+        <element choice="1" default="Draft" label="Request Status" max_length="40" name="request_status" read_only="true" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Draft" sequence="0" value="Draft"/>
+                <element inactive_on_update="false" label="Submitted" sequence="2" value="Submitted"/>
+                <element inactive_on_update="false" label="Approved" sequence="3" value="Approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="Rejected"/>
+                <element inactive_on_update="false" label="Recalled" sequence="6" value="Recalled"/>
+                <element inactive_on_update="false" label="Aborted" sequence="8" value="Aborted"/>
+            </choice>
+        </element>
+        <element label="Resume Operations Date" max_length="1000" name="resume_operations_date" type="string"/>
+        <element label="Rig or W O Last Date" max_length="40" name="rig_or_w_o_last_date" type="string"/>
+        <element label="Single Well Request" max_length="80" name="single_well_request" reference="x_pinr_wsc_wsc_request_well" type="table_name"/>
+        <element label="SITP" max_length="20" name="sitp" type="decimal"/>
+        <element choice="3" default="Submission" label="Stage" max_length="40" name="stage" read_only="true" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Submission" sequence="0" value="Submission"/>
+                <element inactive_on_update="false" label="Landtech" sequence="1" value="Landtech"/>
+                <element inactive_on_update="false" label="Landman" sequence="2" value="Landman"/>
+                <element inactive_on_update="false" label="Engineer" sequence="3" value="Engineer"/>
+                <element inactive_on_update="false" label="Completed" sequence="4" value="Completed"/>
+            </choice>
+        </element>
+        <element label="Other" max_length="80" name="status_change_other" type="string"/>
+        <element label="SWD" max_length="40" name="swd" type="boolean"/>
+        <element label="Test Date" max_length="40" name="test_date" type="glide_date"/>
+        <element label="To Status" max_length="4000" name="to_status" reference="x_pinr_wells_confi_well_status" type="glide_list"/>
+        <element label="Utility Company" max_length="40" name="utility_company" type="string"/>
+        <element label="Utility Company Notified" max_length="40" name="utility_company_notified" type="boolean"/>
+        <element label="Wells" max_length="4000" name="wells" reference="x_pinr_wells_data_well" type="glide_list"/>
+        <element label="WSC Priority" max_length="40" name="wsc_priority" type="string"/>
+        <index name="index">
+            <element name="area"/>
+        </index>
+        <index name="index2">
+            <element name="new_well_status"/>
+        </index>
+        <index name="index3">
+            <element name="foreman"/>
+        </index>
+        <index name="index4">
+            <element name="downtime_code"/>
+        </index>
+        <index name="index5">
+            <element name="county"/>
+        </index>
+        <index name="index6">
+            <element name="field_office"/>
+        </index>
+        <index name="index7">
+            <element name="landman"/>
+        </index>
+        <index name="index8">
+            <element name="engineer"/>
+        </index>
+        <index name="index9">
+            <element name="repaired_into_wsc_request"/>
+        </index>
+        <index name="index10">
+            <element name="division"/>
+        </index>
+        <index name="index11">
+            <element name="current_status"/>
+        </index>
+        <index name="index12">
+            <element name="from_status"/>
+        </index>
+        <index name="index13">
+            <element name="lease_operator"/>
+        </index>
+    </element>
+</database>

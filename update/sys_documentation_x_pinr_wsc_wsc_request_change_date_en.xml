@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="change_date" label="Change Date" language="en" table="x_pinr_wsc_wsc_request">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>change_date</element>
+            <help/>
+            <hint/>
+            <label>Change Date</label>
+            <language>en</language>
+            <name>x_pinr_wsc_wsc_request</name>
+            <plural>Change Dates</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-06 15:08:32</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>2c2c0dd813962f00dd9251522244b049</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Change Date</sys_name>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_documentation_x_pinr_wsc_wsc_request_change_date_en</sys_update_name>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-06 15:08:32</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

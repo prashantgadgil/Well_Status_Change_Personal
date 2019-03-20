@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_action">
+    <sys_ui_action action="INSERT_OR_UPDATE">
+        <action_name/>
+        <active>true</active>
+        <client>false</client>
+        <client_script_v2/>
+        <comments>No preconditions.  Sets the run status to "Running Now".</comments>
+        <condition/>
+        <form_action>true</form_action>
+        <form_button>false</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>false</form_context_menu>
+        <form_link>true</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <hint>Clicking this will run this Well Downtime report of with this this WDTR Configuration</hint>
+        <isolate_script>false</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <name>Run This WDTR Now &gt;&gt;</name>
+        <onclick/>
+        <order>100</order>
+        <script><![CDATA[var param1 = "";
+var param2 = "";
+current.run_status = "Running Now";
+current.update();
+
+//Run WDTR Report for this Configuration
+gs.error("WSC - WDTR is running now");
+var foo = new WSCFunctions();
+foo.runWDTR(current);
+gs.error("WSC - WDTR run complete");
+]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-08 15:22:44</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>1105b2bc1ba7af402d60404ead4bcb3f</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>Run This WDTR Now &gt;&gt;</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_ui_action_1105b2bc1ba7af402d60404ead4bcb3f</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-03-14 14:16:46</sys_updated_on>
+        <table>x_pinr_wsc_wdtr_configuration</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+</record_update>

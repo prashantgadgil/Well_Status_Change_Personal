@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Recompletion" section_id="41829da013eaab00dd9251522244b030" sys_domain="global" table="x_pinr_wsc_wsc_request" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>recompletion_date</element>
+            <position>0</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 19:09:27</sys_created_on>
+            <sys_id>684c4c481b2b6b402d60404ead4bcb59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Recompletion" display_value="Recompletion" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:09:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>old_formation_status</element>
+            <position>1</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 19:09:27</sys_created_on>
+            <sys_id>e44c8c881b2b6b402d60404ead4bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Recompletion" display_value="Recompletion" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:09:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>2</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 19:09:27</sys_created_on>
+            <sys_id>684c8c881b2b6b402d60404ead4bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Recompletion" display_value="Recompletion" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:09:27</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>old_formation_name</element>
+            <position>3</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 19:09:27</sys_created_on>
+            <sys_id>e84c8c881b2b6b402d60404ead4bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Recompletion" display_value="Recompletion" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:09:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>old_formation_prop_num</element>
+            <position>4</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 19:09:27</sys_created_on>
+            <sys_id>6c4c8c881b2b6b402d60404ead4bcb10</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Recompletion" display_value="Recompletion" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:09:27</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Recompletion</caption>
+            <header>false</header>
+            <name>x_pinr_wsc_wsc_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:30:36</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>41829da013eaab00dd9251522244b030</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Recompletion</sys_name>
+            <sys_overrides display_value="">global</sys_overrides>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_ui_section_41829da013eaab00dd9251522244b030</sys_update_name>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 18:49:11</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

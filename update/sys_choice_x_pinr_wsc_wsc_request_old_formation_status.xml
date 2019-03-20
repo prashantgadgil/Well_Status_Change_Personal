@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="old_formation_status" table="x_pinr_wsc_wsc_request" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>old_formation_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>TA</label>
+            <language>en</language>
+            <name>x_pinr_wsc_wsc_request</name>
+            <sequence>0</sequence>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:43:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>ae559d6413eaab00dd9251522244b0bc</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-19 20:43:00</sys_updated_on>
+            <value>TA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>old_formation_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>PA</label>
+            <language>en</language>
+            <name>x_pinr_wsc_wsc_request</name>
+            <sequence>1</sequence>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:43:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>a6559d6413eaab00dd9251522244b0bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-19 20:43:00</sys_updated_on>
+            <value>PA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>old_formation_status</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>None</label>
+            <language>en</language>
+            <name>x_pinr_wsc_wsc_request</name>
+            <sequence>2</sequence>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:43:00</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>fa559d6413eaab00dd9251522244b0c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-19 20:43:00</sys_updated_on>
+            <value>None</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>old_formation_status</element>
+            <name>x_pinr_wsc_wsc_request</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:43:00</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>836a42921bb7a3002d60404ead4bcb6a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>old_formation_status</sys_name>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_choice_x_pinr_wsc_wsc_request_old_formation_status</sys_update_name>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-19 20:43:00</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

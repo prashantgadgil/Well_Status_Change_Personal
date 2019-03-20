@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sys_import_set_row" label="PWR Header Data Source" max_length="40" name="x_pinr_wsc_pwr_header_staging" type="collection">
+        <element attributes="import_attribute_name=AFE_NUM,edge_encryption_enabled=true" label="AFE_NUM" max_length="40" name="u_afe_num" type="string"/>
+        <element attributes="import_attribute_name=AL_TECH,edge_encryption_enabled=true" label="AL_TECH" max_length="40" name="u_al_tech" type="string"/>
+        <element attributes="import_attribute_name=ANCHOR_TESTED,edge_encryption_enabled=true" label="ANCHOR_TESTED" max_length="40" name="u_anchor_tested" type="string"/>
+        <element attributes="import_attribute_name=ANCHOR_TST_DATE,edge_encryption_enabled=true" label="ANCHOR_TST_DATE" max_length="40" name="u_anchor_tst_date" type="string"/>
+        <element attributes="import_attribute_name=AREA,edge_encryption_enabled=true" label="AREA" max_length="40" name="u_area" type="string"/>
+        <element attributes="import_attribute_name=ASSET,edge_encryption_enabled=true" label="ASSET" max_length="40" name="u_asset" type="string"/>
+        <element attributes="import_attribute_name=COMP_SK,edge_encryption_enabled=true" label="COMP_SK" max_length="40" name="u_comp_sk" type="string"/>
+        <element attributes="import_attribute_name=COORDINATOR,edge_encryption_enabled=true" label="COORDINATOR" max_length="40" name="u_coordinator" type="string"/>
+        <element attributes="import_attribute_name=ENGINEER_COMMENT,edge_encryption_enabled=true" label="ENGINEER_COMMENT" max_length="115" name="u_engineer_comment" type="string"/>
+        <element attributes="import_attribute_name=FAILURE,edge_encryption_enabled=true" label="FAILURE" max_length="40" name="u_failure" type="string"/>
+        <element attributes="import_attribute_name=FAILURE_2ND,edge_encryption_enabled=true" label="FAILURE_2ND" max_length="40" name="u_failure_2nd" type="string"/>
+        <element attributes="import_attribute_name=FAILURE_DATE,edge_encryption_enabled=true" label="FAILURE_DATE" max_length="40" name="u_failure_date" type="string"/>
+        <element attributes="import_attribute_name=FOREMAN,edge_encryption_enabled=true" label="FOREMAN" max_length="40" name="u_foreman" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="ï»¿API_14" max_length="40" name="u_ï__api_14" type="string"/>
+        <element attributes="import_attribute_name=LAND_TECH,edge_encryption_enabled=true" label="LAND_TECH" max_length="40" name="u_land_tech" type="string"/>
+        <element attributes="import_attribute_name=OPS_ENGINEER,edge_encryption_enabled=true" label="OPS_ENGINEER" max_length="40" name="u_ops_engineer" type="string"/>
+        <element attributes="import_attribute_name=OPS_TECH,edge_encryption_enabled=true" label="OPS_TECH" max_length="40" name="u_ops_tech" type="string"/>
+        <element attributes="import_attribute_name=PARAFFIN_CHEMICAL_CMT,edge_encryption_enabled=true" label="PARAFFIN_CHEMICAL_CMT" max_length="617" name="u_paraffin_chemical_cmt" type="string"/>
+        <element attributes="import_attribute_name=REC_TO_ENGR,edge_encryption_enabled=true" label="REC_TO_ENGR" max_length="999" name="u_rec_to_engr" type="string"/>
+        <element attributes="import_attribute_name=REF_DTM,edge_encryption_enabled=true" label="REF_DTM" max_length="40" name="u_ref_dtm" type="string"/>
+        <element attributes="import_attribute_name=STATUS,edge_encryption_enabled=true" label="STATUS" max_length="40" name="u_status" type="string"/>
+        <element attributes="import_attribute_name=SUB_STATUS,edge_encryption_enabled=true" label="SUB_STATUS" max_length="40" name="u_sub_status" type="string"/>
+        <element attributes="import_attribute_name=TROUBLESHOOT_CMT,edge_encryption_enabled=true" label="TROUBLESHOOT_CMT" max_length="578" name="u_troubleshoot_cmt" type="string"/>
+        <element attributes="import_attribute_name=WELLNAME,edge_encryption_enabled=true" label="WELLNAME" max_length="40" name="u_wellname" type="string"/>
+        <element attributes="import_attribute_name=WO_TECH,edge_encryption_enabled=true" label="WO_TECH" max_length="40" name="u_wo_tech" type="string"/>
+    </element>
+</database>

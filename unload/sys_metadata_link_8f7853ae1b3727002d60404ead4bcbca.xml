@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>unload</directory>
+        <documentkey>1cb71b621b7727002d60404ead4bcb64</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="x_pinr_wsc_wdtr_configuration">
+    <x_pinr_wsc_wdtr_configuration action="INSERT_OR_UPDATE">
+        <area display_value="Pagan, Steve">66ebee9edb3b2f0018bcf8f33996194b</area>
+        <division display_value="PERMIAN NON JV VERTICALS">5f8bee1edb3b2f0018bcf8f3399619d3</division>
+        <excluded_statuses>59a1a6d2dbf72f0018bcf8f339961961,55a1a6d2dbf72f0018bcf8f339961962,d9a1a6d2dbf72f0018bcf8f339961962</excluded_statuses>
+        <foreman display_value="Bailey, Steve">4941fe404a362314003d34fc1b150a04</foreman>
+        <last_reported_after>2018-08-01</last_reported_after>
+        <last_reported_before/>
+        <last_run_on>2019-02-26 14:40:07</last_run_on>
+        <name>Lisa Test</name>
+        <number>WDT0001001</number>
+        <pumper display_value="Hartman, Blake">bb3d39ed4ff29b80ccee97411310c798</pumper>
+        <run_status>Last Run Completed</run_status>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-26 14:40:02</sys_created_on>
+        <sys_id>1cb71b621b7727002d60404ead4bcb64</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-02-26 14:40:07</sys_updated_on>
+        <unit display_value="San Angelo - Spraberry">045cae12db7b2f0018bcf8f339961924</unit>
+        <user display_value="McCollum, Lisa">101fd35cb120310064b5e5679a0fd085</user>
+    </x_pinr_wsc_wdtr_configuration>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-26 14:42:15</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>8f7853ae1b3727002d60404ead4bcbca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Lisa Test</sys_name>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_metadata_link_8f7853ae1b3727002d60404ead4bcbca</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-02-26 14:42:15</sys_updated_on>
+        <tablename>x_pinr_wsc_wdtr_configuration</tablename>
+    </sys_metadata_link>
+</record_update>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>10</order>
+        <role display_value="x_pinr_wsc.WSC Administrator" name="x_pinr_wsc.WSC Administrator">98c6d634130fe300dd9251522244b01c</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>rosen768</sys_created_by>
+        <sys_created_on>2019-01-14 16:38:58</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a5d61ef4130fe300dd9251522244b042</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>98c6d634130fe300dd9251522244b01c</sys_name>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_embedded_help_role_a5d61ef4130fe300dd9251522244b042</sys_update_name>
+        <sys_updated_by>rosen768</sys_updated_by>
+        <sys_updated_on>2019-01-14 16:38:58</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>

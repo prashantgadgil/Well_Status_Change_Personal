@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="c5829da013eaab00dd9251522244b031" sys_domain="global" table="x_pinr_wsc_wsc_request" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:30:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>4d829da013eaab00dd9251522244b033</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Well Status Change Request " display_value="Well Status Change Request " name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">4d79f7671306ab00dd9251522244b07d</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 14:28:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-01-15 20:16:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>1052141913836700dd9251522244b03d</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Well Type" display_value="Well Type" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">5452141913836700dd9251522244b039</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 14:28:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:30:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>49829da013eaab00dd9251522244b034</sys_id>
+            <sys_mod_count>11</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Land" display_value="Land" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b02f</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:12:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:30:36</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>41829da013eaab00dd9251522244b038</sys_id>
+            <sys_mod_count>7</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Recompletion" display_value="Recompletion" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">41829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 18:30:44</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:30:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>c9829da013eaab00dd9251522244b054</sys_id>
+            <sys_mod_count>11</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">89829da013eaab00dd9251522244b030</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 19:12:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 13:15:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>9d4b72b71b536b402d60404ead4bcbd4</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Estimated Volumes" display_value="Estimated Volumes" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">114b72b71b536b402d60404ead4bcbd2</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 18:30:44</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>6</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-02-05 13:13:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_id>54da3a771b536b402d60404ead4bcbbd</sys_id>
+            <sys_mod_count>4</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_pinr_wsc_wsc_request" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">c5829da013eaab00dd9251522244b031</sys_ui_form>
+            <sys_ui_section caption="Electrical" display_value="Electrical" name="x_pinr_wsc_wsc_request" sys_domain="global" view="Default view">5cdab6371b536b402d60404ead4bcb05</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 18:30:44</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_pinr_wsc_wsc_request</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2018-12-19 20:30:36</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>c5829da013eaab00dd9251522244b031</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_pinr_wsc_wsc_request</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_ui_form_sections_c5829da013eaab00dd9251522244b031</sys_update_name>
+            <sys_updated_by>rosen768</sys_updated_by>
+            <sys_updated_on>2018-12-19 20:30:36</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

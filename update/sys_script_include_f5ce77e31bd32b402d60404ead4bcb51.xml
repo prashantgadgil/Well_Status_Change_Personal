@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_pinr_wsc.WSCFunctions</api_name>
+        <client_callable>false</client_callable>
+        <description>This is a collection of functions that can be shared across the WSC application.  The current set of functions are:&#13;
+&#13;
+isWSCTaskExecutableForThisUser – checks to see if the user has the proper role/group membership to execute the task.&#13;
+&#13;
+getTaskAssignment – analyzes the task to determine if the task should be assigned to either an individual (specified named landman or engineer) or a role/group based  on what the task is, where it is in the workflow and data in the task.&#13;
+&#13;
+getEmailConfig – determines the email distribution based off of the specified wells' area and data in the wells_confi_email_config table.&#13;
+&#13;
+getPWRStatus – Gets the Latest PWR Status for the well by querying PWR Header table. &#13;
+&#13;
+validateWSCRequest – This function is responsible for ensuring that all validations rules on the requests are not violated when a task is submitted/rejected/approved.  It is responsible for determining &#13;
+&#13;
+if the request is in a valid state as well as providing any appropriate message(s) to the user if the request did fail validation.&#13;
+&#13;
+runWDTR - This function is invoked when Well Down Time Report is run by clicking a button on WDTR Configuration Form. It has all the calculations and logic for generating a well downtime report.&#13;
+</description>
+        <name>WSCFunctions</name>
+        <script><![CDATA[ 
+var WSCFunctions = Class.create();
+WSCFunctions.prototype = {
+    initialize: function() {
+    },
+
+	
+/**
+* Description:Function which decides if current wsc task can be completed by the logged in user or not. 
+* Parameters: wsc_task record, loggedin user
+* Returns: true if the current task can be executed by the logged in user, otherwise false
+*/
+ 
+	isWSCTaskExecutableForThisUser: function(wsc_task, gsuser) {
+			
+			var allowed = false;
+			if (wsc_task.active) {	
+				var firstName = gsuser.getFirstName(); 
+				var id = gsuser.getID();
+				var username = gsuser.getName();
+				var roles = gsuser.getRoles();
+				var assignment_group = wsc_task.assignment_group.name.toString();
+				allowed = gsuser.isMemberOf(assignment_group);
+			}
+			return allowed;
+		
+
+	},
+	
+/**
+* Description: Gets the task assignment based on division and role config 
+* Parameters: wsc request record and wsc task type
+* Returns: assignment json object which contains group sys id or user sys id to which wsc task shoudl be assigned.
+*/
+ 	
+	
+	getTaskAssignment: function(wsc_request, type) {
+//			gs.error("Jay - Getting Task Assignment for wsc_request, type ..." + wsc_request.short_description + "," + type + ", wells=" + wsc_request.wells.toString());	
+			var division_sys_id = "";
+			var list = wsc_request.wells.toString();
+			var array = list.split(",");
+			gs.error("WSC - array len: " + array.length);
+			if(array.length >= 1) {
+				//current.is_single_well_change = true;
+				gs.error("WSC - [" + 0 + "]: well reference: " + array[0]);
+				var grwell = new GlideRecord('x_pinr_wells_data_well');
+				grwell.addQuery("sys_id", array[0]);
+				grwell.query();
+				if (grwell.next()) {
+					division_sys_id = grwell.division;
+					//gs.error( "WSC - Found Division = " + grwell.division.name);
+				}
+				else {
+					//gs.error( "WSC  - Well Not found");
+				}
+			}
+			var assignment = {};
+			assignment.assigned_to_sys_id = "";
+			assignment.assigned_to_group_sys_id = "";
+
+			if (!division_sys_id.nil()) {
+				  var gr_roleconfig = new GlideRecord("x_pinr_wells_confi_role_config");
+				  gr_roleconfig.addQuery("division", division_sys_id);
+				  gr_roleconfig.addQuery("type",type);
+				  gr_roleconfig.query();
+				  if (gr_roleconfig.next()) {
+					  assignment.assigned_to_group_sys_id = gr_roleconfig.group;
+					  assignment.assigned_to_sys_id = gr_roleconfig.user;
+					  
+				  }
+			}
+		
+			if (type == "Landman") {
+				if (!wsc_request.landman.nil()) {
+					assignment.assigned_to_sys_id = wsc_request.landman;
+				}
+			}
+			if (type == "Engineer") {
+				if (!wsc_request.engineer.nil()) {
+					assignment.assigned_to_sys_id = wsc_request.engineer;
+				}
+			}
+
+//		gs.error("Jay - division_sys_id, type, assignment = " + division_sys_id + "," + type + "," + JSON.stringify(assignment));	
+			return assignment;
+	},
+	
+/**
+* Description: function to get email configuration based on the areafor the well in the wsc request 
+* Parameters: wsc request record
+* Returns: email config json object containing initial and final dist list.
+*/
+ 	
+	getEmailConfig: function(wsc_request) {
+//			gs.error("WSC - Getting Email Configuration for wsc_request " + wsc_request.short_description + ", wells=" + wsc_request.wells.toString());	
+			var area_sys_id = "";
+			var list = wsc_request.wells.toString();
+			var array = list.split(",");
+//			gs.error("Jay - array len: " + array.length);
+			if(array.length >= 1) {
+				//current.is_single_well_change = true;
+				gs.error("Jay - [" + 0 + "]: well reference: " + array[0]);
+				var grwell = new GlideRecord('x_pinr_wells_data_well');
+				grwell.addQuery("sys_id", array[0]);
+				grwell.query();
+				if (grwell.next()) {
+					area_sys_id = grwell.area;
+//					gs.error( "Jay - Found Area = " + grwell.area.name);
+				}
+				else {
+//					gs.error( "Jay  - Well Not found");
+				}
+			}
+			var emailConfig = {};
+			emailConfig.initial_dist_list = "";
+			emailConfig.final_dist_list = "";
+
+			if (!area_sys_id.nil()) {
+				  var gr_emailconfig = new GlideRecord("x_pinr_wells_confi_email_config");
+				  gr_emailconfig.addQuery("area", area_sys_id);
+				  gr_emailconfig.query();
+				  if (gr_emailconfig.next()) {
+					  emailConfig.initial_dist_list = gr_emailconfig.initial_dist_list.toString();
+					  emailConfig.final_dist_list = gr_emailconfig.final_dist_list.toString();
+				  }
+			}
+//			gs.error("Jay - area_sys_id,  emailConfig = " + area_sys_id + "," + JSON.stringify(emailConfig));	
+			return emailConfig;
+	},
+	
+	
+/**
+* Description: gets the PWR status from PWR Header table for given well compsk 
+* Parameters: comp_sk of a well
+* Returns: PWR status
+*/
+ 
+	getPWRStatus: function(compsk) {
+			var pwrStatus = "NOT FOUND";
+			var grPWR = new GlideRecord("x_pinr_wsc_pwr_header");
+			grPWR.addQuery("comp_sk", compsk);
+			grPWR.orderByDesc("failure_date");
+			grPWR.query();
+			if (grPWR.next()) {
+				pwrStatus = grPWR.status;
+			}
+			gs.error("WSC - Getting PWR status for a well with comp_sk = " + compsk + ", found PWR Status = " + pwrStatus);
+			return pwrStatus;
+	},
+	
+/**
+* Description: this is a function which contains server side validation of the wsc request before submission.
+* Parameters: wsc_request record.
+* Returns: validationPassed true or false
+*/
+	validateWSCRequest: function(wsc_request) {
+		var validationPassed = true;
+		// Well must be selected
+		if (gs.nil(wsc_request.wells)){
+			validationPassed = false;
+			gs.addErrorMessage("No well selected for changing status. Please select at least one well first.");
+		}
+		if (gs.nil(wsc_request.field_office)){
+			validationPassed = false;
+			gs.addErrorMessage("You must select a field office for this well.");
+		}
+		// Well must be selected
+		if (gs.nil(wsc_request.api)){
+			validationPassed = false;
+			gs.addErrorMessage("The API value is required to move forward with a well status change. If it is not populated, please look up this week's API and enter to continue.");
+		}
+		// Change Effective Date must be selected
+		if (gs.nil(wsc_request.change_date)){
+			validationPassed = false;
+			gs.addErrorMessage("The effective date of the change is required to change the status of a well.");
+		}
+
+		// From status must be specified
+		if (gs.nil(wsc_request.from_status)){
+			validationPassed = false;
+			gs.addErrorMessage("The previous status of the well is required in order to process a changed status.");
+		}
+		// New status must be specified
+		if (gs.nil(wsc_request.new_well_status)){
+			validationPassed = false;
+			gs.addErrorMessage("In order to process a well change. the well must have a status change. Please enter the new status.");
+		}
+		// From status and new status can't be identical. 
+		if ( (!gs.nil(wsc_request.from_status)) & 
+			 (!gs.nil(wsc_request.new_well_status)) &
+			 (wsc_request.from_status.display_name == wsc_request.new_well_status.display_name)
+		   ){
+			validationPassed = false;
+			gs.addErrorMessage("The from and new statuses are the same. You cannot submit a status change that does not change the status of the well.");
+		}
+
+		// Last Production Date has to be selected if from Status is Producing. 
+		if ((wsc_request.from_status.display_name == "Producing") & gs.nil(wsc_request.last_production_date)){
+			validationPassed = false;
+			gs.addErrorMessage("You indicated that well is changing from a Producing status. You must enter the date of last production in the Operations section.");
+		}
+		// if new status is not producing and current status is producing, then downtime code is required.. 
+		if  (
+			((wsc_request.new_well_status.display_name == "Shut-In") ||  
+			 (wsc_request.new_well_status.display_name == "Temporarily Abandoned") || 
+			 (wsc_request.new_well_status.display_name == "Permanently Abandoned") )
+			& 
+			gs.nil(wsc_request.downtime_code)
+			)
+			{
+			validationPassed = false;
+			gs.addErrorMessage("Downtime code is required on Operations tab if new well status is Shut-In, Temporarily Abandoned or Permanently Abandoned.");
+		}
+
+		// First Production Date has to be selected if New Status is Producing. 
+		if ((wsc_request.new_well_status.display_name == "Producing") & gs.nil(wsc_request.first_production_date)){
+			validationPassed = false;
+			gs.addErrorMessage("You indicated that well is changing to Producing status. You must enter the first production date in the Operations section.");
+		}
+
+		// Engineer has to be selected. 
+		if (gs.nil(wsc_request.engineer)){
+			validationPassed = false;
+			gs.addErrorMessage("Engineer to approve the request has to be selected.");
+		}
+		return validationPassed;
+	},
+	
+/**
+* Description: this is the function which is invoked when Well Downtime report is executed from UI form of WDTR configuration 
+* Parameters: wdtr_config record
+* Returns: returns nothing. Just populates WDTR Result table with result of Well downtime report for this configuration 
+*/
+ 	
+	runWDTR: function(wdtr_config) {
+		// delete existing rows in WDTR Result for the passed in wdtr_config.
+		gs.error( " WSC - GDTR - Inside the runWDTR function in WSCFunctions with wdtr_configuration " + wdtr_config.name);
+		
+		var wscfunc = new WSCFunctions();
+		
+		var gresult = new GlideRecord("x_pinr_wsc_wdtr_result");
+		gresult.addQuery("wdtr_configuration", wdtr_config.sys_id);
+		gresult.query();
+		gs.error( " WSC - GDTR - Deleting row count = " + gresult.getRowCount());
+		gresult.deleteMultiple();
+		
+		
+//		gs.error("WSC - GDTR Excluding Well Statuses - " + wdtr_config.excluded_statuses.toString());
+		
+		// select wells for which the report is being run.
+		var grwells = new GlideRecord("x_pinr_wells_data_well");
+
+		if (!wdtr_config.division.nil()) {
+			grwells.addQuery("division", wdtr_config.division);
+		}
+		if (!wdtr_config.area.nil()) {
+			grwells.addQuery("area", wdtr_config.area);
+		}
+		if (!wdtr_config.unit.nil()) {
+			grwells.addQuery("unit", wdtr_config.unit);
+		}
+		if (!wdtr_config.pumper.nil()) {
+			grwells.addQuery("pumper", wdtr_config.pumper);
+		}
+		if (!wdtr_config.foreman.nil()) {
+			grwells.addQuery("foreman", wdtr_config.foreman);
+		}
+
+		var excludedStatusesArray = wdtr_config.excluded_statuses.toString();
+		if (excludedStatusesArray.length > 0) {
+			grwells.addQuery('well_status','NOT IN',excludedStatusesArray);
+		}
+		
+		grwells.query();
+		gs.error( " WSC - GDTR - Found Wells Count = " + grwells.getRowCount());
+
+		while (grwells.next()) {
+//			gs.error( " WSC - GDTR - Well to be included in GDTR  = " + grwells.name);
+			var gresultnew  = new GlideRecord("x_pinr_wsc_wdtr_result");
+			gresultnew.newRecord();
+			gresultnew.initialize();
+			gresultnew.wdtr_configuration = wdtr_config.sys_id;
+			gresultnew.well = grwells.sys_id;
+			gresultnew.status_change = "";//OK";
+			gresultnew.pwr = "";//NO";
+			
+			// check is WSC request is in progress or completed
+			// populate any existing WSC request going on for that well.
+			var gwscrequestwell = new GlideRecord("x_pinr_wsc_wsc_request_well");
+			gwscrequestwell.addQuery("well",grwells.sys_id);
+			gwscrequestwell.orderByDesc("created"); // order by desc API does not seem to be working as expected. still orders in asc 
+			gwscrequestwell.query();
+			var requestwellcount = gwscrequestwell.getRowCount();
+			gs.error("WDTR - gwscrequestwell for well , count=" + grwells.name + "," + gwscrequestwell.getRowCount());
+			while (gwscrequestwell.next()) { // order by desc API does not seem to be working as expected. still orders in asc . hence put while loop to get the latest in the end. otherwise would need if block.
+				var existing_wsc_request =  gwscrequestwell.wsc_request.number;
+				gresultnew.latest_wsc_request = gwscrequestwell.wsc_request.sys_id;
+				var gwscrequest = new GlideRecord("x_pinr_wsc_wsc_request");
+				gwscrequest.addQuery("sys_id",gwscrequestwell.wsc_request.sys_id);
+				gwscrequest.query();
+				if (gwscrequest.next()) {
+					gresultnew.last_well_status_change = gwscrequest.number + " - " + gwscrequest.opened_at.toString() + " ( " + gwscrequest.from_status.value+ " to " + gwscrequest.new_well_status.value + " ) " + gwscrequest.request_status;					
+				}
+			}
+
+			// populate downtime for that well.
+			var grwdt = new GlideRecord("x_pinr_wells_data_well_downtime");
+			grwdt.addQuery("comp_sk",grwells.comp_sk);
+			
+			
+			if (!wdtr_config.last_reported_before.nil()) {
+				var date1 = new GlideDate();
+				var currval = current.last_reported_before;
+				date1.setValue(currval);
+// 				if (!wdtr_config.for_number_of_days_before.nil()) {
+// 					var decrement = wdtr_config.for_number_of_days_before;
+// 					date1.addDaysUTC(-1*decrement);
+// 				}
+				grwdt.addQuery("prod_date","<", date1);
+			}
+			
+			var lastReportedAfter = wdtr_config.last_reported_after.toString();
+			if (!wdtr_config.last_reported_after.nil()) {
+				grwdt.addQuery("prod_date",">", wdtr_config.last_reported_after);
+			}
+			
+			grwdt.query();
+			var downtimeDays = 0;
+			var downtimeReason = "";
+			var latestReportDate;
+			while (grwdt.next()) {
+				downtimeDays +=  grwdt.downtime_days;
+				downtimeReason = grwdt.reason.toString();
+				latestReportDate = grwdt.prod_date;
+			}
+			gresultnew.days = downtimeDays;
+			gresultnew.latest_report_date = latestReportDate;
+			gresultnew.reason = downtimeReason;
+			
+
+			if (downtimeReason.length > 3) {
+				var downtimecodeValue = downtimeReason.substring(downtimeReason.length-2, downtimeReason.length);
+				
+				// find downtime code sys_id for this downtimecodeValue;
+				var grdtcode = new GlideRecord('x_pinr_wells_confi_downtime_code');
+				grdtcode.addQuery("value", downtimecodeValue.trim());
+				//grdtcode.addQuery('display_name', 'WATER HAUL');
+				grdtcode.query();
+				var downtimecodesysid = "";
+				while (grdtcode.next()) {
+					gs.error("WSC - ***************** Found sysid");
+					downtimecodesysid = grdtcode.sys_id;
+				}
+// 				gs.error("WSC - GDTR - Found downtime code=" + downtimecodeValue + ",For downtimeReason = " + downtimeReason + " downtimecodesysid = " + downtimecodesysid);
+				gresultnew.downtime_code = downtimecodesysid;
+			 	
+	
+				// for each well, check the downtime table and capture downtime
+				// compare downtime with downtime threshold
+				var grdtthreshold = new GlideRecord('x_pinr_wells_confi_downtime_threshold');
+				//var dtcode = grdtthreshold.addJoinQuery('x_pinr_wells_confi_downtime_code', 'sys_id', 'downtime_code');
+				//dtcode.addCondition('value', downtimecodeValue);
+				grdtthreshold.addQuery('area', wdtr_config.area);
+				if (!gs.nil(downtimecodesysid)) {
+					//gs.error("WSC - Adding downtime code to query of downtime threshold");
+					grdtthreshold.addQuery('downtime_code', downtimecodesysid);
+				}
+				grdtthreshold.query();
+				//gs.error("WSC = DTThreshold for downtimecodesysid   " + downtimecodesysid + ", rowscount = " + grdtthreshold.getRowCount());
+				if (grdtthreshold.next()) {
+					var threshold = grdtthreshold.threshold;
+					var pwrRequired  = grdtthreshold.pwr_required;
+					//gs.error("WSC - GDTR Area, DowntimeCodeValue , Threshold, PWRRequired, downtimeDays= " + wdtr_config.area.name + "," + downtimecodeValue + "," + threshold + "," +  pwrRequired + "," +  downtimeDays);
+					if (downtimeDays >= threshold) {
+							gresultnew.status_change = "Needed";
+					}
+					gresultnew.pwr = grdtthreshold.pwr_required;
+					// get PWR Status from PWR Header table, if PWR is required.
+					if (pwrRequired  == "Yes") {
+						gresultnew.pwr_status = wscfunc.getPWRStatus(grwells.comp_sk);
+					}
+					else {
+						gresultnew.pwr_status = "Not Required";
+					}
+				}
+				else {
+					gs.error("WSC - GDTR - Did not find Threshold for Area = " + wdtr_config.area.name + "  downtime_code value = " + downtimecodeValue);
+				}
+		
+			} 
+			// enter row in WDTR Result table
+			gresultnew.insert();
+		}
+		
+		// update the WDTR config table with last run date and status
+		var grconfig = new GlideRecord("x_pinr_wsc_wdtr_configuration");
+		grconfig.addQuery("sys_id", wdtr_config.sys_id);
+		grconfig.query();
+		if (grconfig.next()) {
+			grconfig.run_status = "Last Run Completed";
+			grconfig.last_run_on = new GlideDateTime();
+			grconfig.update();
+		}
+	},	
+	
+    type: 'WSCFunctions'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-04 23:42:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f5ce77e31bd32b402d60404ead4bcb51</sys_id>
+        <sys_mod_count>180</sys_mod_count>
+        <sys_name>WSCFunctions</sys_name>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_script_include_f5ce77e31bd32b402d60404ead4bcb51</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-03-20 12:37:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

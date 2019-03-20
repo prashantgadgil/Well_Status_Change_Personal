@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_paraffin_chemical_cmt" label="PARAFFIN_CHEMICAL_CMT" language="en" table="x_pinr_wsc_pwr_header_staging">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_paraffin_chemical_cmt</element>
+            <help/>
+            <hint/>
+            <label>PARAFFIN_CHEMICAL_CMT</label>
+            <language>en</language>
+            <name>x_pinr_wsc_pwr_header_staging</name>
+            <plural>PARAFFIN_CHEMICAL_CMTs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-11 15:25:16</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>b3fe523adb08738018bcf8f339961997</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>PARAFFIN_CHEMICAL_CMT</sys_name>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_documentation_x_pinr_wsc_pwr_header_staging_u_paraffin_chemical_cmt_en</sys_update_name>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-11 15:25:16</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

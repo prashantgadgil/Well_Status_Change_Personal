@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WDTR Result" max_length="40" name="x_pinr_wsc_wdtr_result" type="collection">
+        <element label="Days" max_length="40" name="days" type="integer"/>
+        <element label="Downtime Code" max_length="32" name="downtime_code" reference="x_pinr_wells_confi_downtime_code" type="reference"/>
+        <element label="Last Well Status Change" max_length="100" name="last_well_status_change" type="string"/>
+        <element label="Latest Report Date" max_length="40" name="latest_report_date" type="glide_date_time"/>
+        <element label="Latest WSC Request" max_length="32" name="latest_wsc_request" reference="x_pinr_wsc_wsc_request" type="reference"/>
+        <element label="PWR" max_length="40" name="pwr" type="string"/>
+        <element label="PWR Status" max_length="40" name="pwr_status" type="string"/>
+        <element label="Reason" max_length="40" name="reason" type="string"/>
+        <element choice="3" default="OK" label="Status Change" max_length="40" name="status_change" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="OK" sequence="0" value="OK"/>
+                <element inactive_on_update="false" label="Needed" sequence="1" value="Needed"/>
+                <element inactive_on_update="false" label="In Progress" sequence="2" value="In Progress"/>
+                <element inactive_on_update="false" label="Approved" sequence="3" value="Approved"/>
+                <element inactive_on_update="false" label="Rejected" sequence="4" value="Rejected"/>
+            </choice>
+        </element>
+        <element label="WDTR Configuration" max_length="32" name="wdtr_configuration" reference="x_pinr_wsc_wdtr_configuration" type="reference"/>
+        <element label="Well" max_length="32" name="well" reference="x_pinr_wells_data_well" type="reference"/>
+        <index name="index">
+            <element name="downtime_code"/>
+        </index>
+        <index name="index2">
+            <element name="well"/>
+        </index>
+        <index name="index3">
+            <element name="wdtr_configuration"/>
+        </index>
+        <index name="index4">
+            <element name="latest_wsc_request"/>
+        </index>
+    </element>
+</database>

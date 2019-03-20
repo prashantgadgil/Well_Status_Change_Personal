@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="WDTR Configuration" max_length="40" name="x_pinr_wsc_wdtr_configuration" type="collection">
+        <element label="Area" max_length="32" name="area" reference="x_pinr_wells_confi_area" type="reference"/>
+        <element label="Division" max_length="32" name="division" reference="x_pinr_wells_confi_division" type="reference"/>
+        <element label="Excluded Statuses" max_length="4000" name="excluded_statuses" reference="x_pinr_wells_confi_well_status" type="glide_list"/>
+        <element label="Foreman" max_length="32" name="foreman" reference="sys_user" reference_qual="active=true^u_person_type=C^ORu_person_type=E^EQ" reference_qual_condition="active=true^u_person_type=C^ORu_person_type=E^EQ" type="reference"/>
+        <element label="Last Reported After" max_length="40" name="last_reported_after" type="glide_date"/>
+        <element label="Last Reported Before" max_length="40" name="last_reported_before" type="glide_date"/>
+        <element label="Last Run On" max_length="40" name="last_run_on" read_only="true" type="glide_date_time"/>
+        <element label="Name" mandatory="true" max_length="40" name="name" type="string"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Pumper" max_length="32" name="pumper" reference="sys_user" reference_qual="active=true^u_person_type=C^ORu_person_type=E^EQ" reference_qual_condition="active=true^u_person_type=C^ORu_person_type=E^EQ" type="reference"/>
+        <element choice="3" default="Not Run Yet" label="Run Status" max_length="40" name="run_status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Not Run Yet" sequence="0" value="Not Run Yet"/>
+                <element inactive_on_update="false" label="Running Now" sequence="1" value="Running Now"/>
+                <element inactive_on_update="false" label="Last Run Completed" sequence="2" value="Last Run Completed"/>
+            </choice>
+        </element>
+        <element label="Unit" max_length="32" name="unit" reference="x_pinr_wells_confi_unit" type="reference"/>
+        <element label="User" mandatory="true" max_length="32" name="user" reference="sys_user" reference_qual="active=true^u_person_type=C^ORu_person_type=E^EQ" reference_qual_condition="active=true^u_person_type=C^ORu_person_type=E^EQ" type="reference"/>
+        <index name="index">
+            <element name="area"/>
+        </index>
+        <index name="index2">
+            <element name="division"/>
+        </index>
+        <index name="index3">
+            <element name="unit"/>
+        </index>
+        <index name="index4">
+            <element name="foreman"/>
+        </index>
+        <index name="index5">
+            <element name="pumper"/>
+        </index>
+        <index name="index6">
+            <element name="user"/>
+        </index>
+    </element>
+</database>

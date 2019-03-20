@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <description>This controls the visibility of fields on WSC Task screen.</description>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+	
+		//wsc request tab
+		g_form.setReadOnly("wsc_request.number", true);
+		//g_form.setReadOnly("wsc_request", true);
+		g_form.setReadOnly("wsc_request.request_status", true);
+		g_form.setReadOnly("wsc_request.new_well_status", true);
+		g_form.setReadOnly("wsc_request.change_date", true);
+		g_form.setReadOnly("wsc_request.engineer", true);
+		g_form.setReadOnly("wsc_request.wells", true);
+		g_form.setReadOnly("wsc_request.api", true);
+		g_form.setReadOnly("wsc_request.field_office", true);
+		g_form.setReadOnly("wsc_request.area", true);
+		g_form.setReadOnly("wsc_request.division", true);
+		g_form.setReadOnly("wsc_request.from_status", true);
+		g_form.setReadOnly("wsc_request.foreman", true);
+		g_form.setReadOnly("wsc_request.lease_operator", true);
+		g_form.setReadOnly("wsc_request.county", true);
+
+		// well type tab
+		g_form.setReadOnly("wsc_request.oil", true);
+		g_form.setReadOnly("wsc_request.gas", true);
+		g_form.setReadOnly("wsc_request.swd", true);
+		g_form.setReadOnly("wsc_request.infill_well", true);
+		g_form.setReadOnly("wsc_request.federal_well", true);
+		g_form.setReadOnly("wsc_request.pa_agreement", true);
+		g_form.setReadOnly("wsc_request.flowing", true);
+		g_form.setReadOnly("wsc_request.pumping", true);
+		g_form.setReadOnly("wsc_request.esp", true);
+		g_form.setReadOnly("wsc_request.gas_lift", true);
+		g_form.setReadOnly("wsc_request.status_change_other", true);
+
+		// land tab
+		g_form.setReadOnly("wsc_request.leasehold_at_risk", true);
+		g_form.setReadOnly("wsc_request.critical_date", true);
+		g_form.setReadOnly("wsc_request.cessation_days", true);
+		g_form.setReadOnly("wsc_request.offset_well", true);
+		g_form.setReadOnly("wsc_request.land_comments", true);
+		g_form.setReadOnly("wsc_request.landman", true);
+	
+	
+	
+		// recompletion tab
+		g_form.setReadOnly("wsc_request.recompletion_date", true);
+		g_form.setReadOnly("wsc_request.old_formation_status", true);
+		g_form.setReadOnly("wsc_request.old_formation_name", true);
+		g_form.setReadOnly("wsc_request.old_formation_prop_num", true);
+
+		// operations tab
+		g_form.setReadOnly("wsc_request.last_production_date", true);
+		g_form.setReadOnly("wsc_request.rig_or_w_o_last_date", true);
+		g_form.setReadOnly("wsc_request.cibp_for_ta", true);
+		g_form.setReadOnly("wsc_request.downtime_code", true);
+		g_form.setReadOnly("wsc_request.field_operations_remarks", true);
+		g_form.setReadOnly("wsc_request.resume_operations_date", true);
+		g_form.setReadOnly("wsc_request.first_production_date", true);
+		g_form.setReadOnly("wsc_request.hbp", true);
+		g_form.setReadOnly("wsc_request.blm_date", true);
+		g_form.setReadOnly("wsc_request.engineer_comments", true);
+
+		// estimated volumes tab
+	
+		g_form.setReadOnly("wsc_request.test_date", true);
+		g_form.setReadOnly("wsc_request.bwpd", true);
+		g_form.setReadOnly("wsc_request.sitp", true);
+		g_form.setReadOnly("wsc_request.cp", true);
+		g_form.setReadOnly("wsc_request.bsw", true);
+		g_form.setReadOnly("wsc_request.gl", true);
+		g_form.setReadOnly("wsc_request.bopd", true);
+		g_form.setReadOnly("wsc_request.mcfd", true);
+		g_form.setReadOnly("wsc_request.ftp", true);
+		g_form.setReadOnly("wsc_request.choke", true);
+		g_form.setReadOnly("wsc_request.grav", true);
+		g_form.setReadOnly("wsc_request.gor", true);
+	
+		// electrical tab
+		g_form.setReadOnly("wsc_request.cancel_account", true);
+		g_form.setReadOnly("wsc_request.utility_company", true);
+		g_form.setReadOnly("wsc_request.meter_num", true);
+		g_form.setReadOnly("wsc_request.utility_company_notified", true);
+		g_form.setReadOnly("wsc_request.date_notified", true);
+	
+	
+	    if ((g_form.getValue("short_description")== "Landtech Review") && g_user.hasRole("x_pinr_wsc.WSC Land Tech") && g_form.getValue("active")== "true") {
+			// land tab
+			g_form.setReadOnly("wsc_request.leasehold_at_risk", false);
+			g_form.setReadOnly("wsc_request.critical_date", false);
+			g_form.setReadOnly("wsc_request.cessation_days", false);
+			g_form.setReadOnly("wsc_request.offset_well", false);
+			g_form.setReadOnly("wsc_request.land_comments", false);
+			g_form.setReadOnly("wsc_request.landman", false);
+			
+		}
+	    if ((g_form.getValue("short_description")== "Landman Review") && g_user.hasRole("x_pinr_wsc.WSC Land Man") && g_form.getValue("active")== "true") {
+			// land tab
+			g_form.setReadOnly("wsc_request.leasehold_at_risk", false);
+			g_form.setReadOnly("wsc_request.critical_date", false);
+			g_form.setReadOnly("wsc_request.cessation_days", false);
+			g_form.setReadOnly("wsc_request.offset_well", false);
+			g_form.setReadOnly("wsc_request.land_comments", false);
+			//g_form.setReadOnly("wsc_request.landman", false);
+			
+		}
+	   //alert("Evaluating condition for Review Reject and Submit");
+		if ((g_form.getValue("short_description")== "Review Reject and Submit") && g_user.hasRole("x_pinr_wsc.WSC Originator") && g_form.getValue("active")== "true")  {
+		   //alert("successfully passed the visibility check. ");
+		//wsc request tab
+//			g_form.setReadOnly("wsc_request.number", false);
+			g_form.setReadOnly("wsc_request", false);
+//			g_form.setReadOnly("wsc_request.request_status", false);
+			g_form.setReadOnly("wsc_request.new_well_status", false);
+			g_form.setReadOnly("wsc_request.change_date", false);
+			g_form.setReadOnly("wsc_request.engineer", false);
+//			g_form.setReadOnly("wsc_request.wells", false);
+			g_form.setReadOnly("wsc_request.api", false);
+			g_form.setReadOnly("wsc_request.field_office", false);
+			g_form.setReadOnly("wsc_request.area", false);
+			g_form.setReadOnly("wsc_request.division", false);
+			g_form.setReadOnly("wsc_request.from_status", false);
+			g_form.setReadOnly("wsc_request.foreman", false);
+			g_form.setReadOnly("wsc_request.lease_operator", false);
+			g_form.setReadOnly("wsc_request.county", false);
+
+			// well type tab
+			g_form.setReadOnly("wsc_request.oil", false);
+			g_form.setReadOnly("wsc_request.gas", false);
+			g_form.setReadOnly("wsc_request.swd", false);
+			g_form.setReadOnly("wsc_request.infill_well", false);
+			g_form.setReadOnly("wsc_request.federal_well", false);
+			g_form.setReadOnly("wsc_request.pa_agreement", false);
+			g_form.setReadOnly("wsc_request.flowing", false);
+			g_form.setReadOnly("wsc_request.pumping", false);
+			g_form.setReadOnly("wsc_request.esp", false);
+			g_form.setReadOnly("wsc_request.gas_lift", false);
+			g_form.setReadOnly("wsc_request.status_change_other", false);
+
+			// recompletion tab
+			g_form.setReadOnly("wsc_request.recompletion_date", false);
+			g_form.setReadOnly("wsc_request.old_formation_status", false);
+			g_form.setReadOnly("wsc_request.old_formation_name", false);
+			g_form.setReadOnly("wsc_request.old_formation_prop_num", false);
+
+			// operations tab
+			g_form.setReadOnly("wsc_request.last_production_date", false);
+			g_form.setReadOnly("wsc_request.rig_or_w_o_last_date", false);
+			g_form.setReadOnly("wsc_request.cibp_for_ta", false);
+			g_form.setReadOnly("wsc_request.downtime_code", false);
+			g_form.setReadOnly("wsc_request.field_operations_remarks", false);
+			g_form.setReadOnly("wsc_request.resume_operations_date", false);
+			g_form.setReadOnly("wsc_request.first_production_date", false);
+			g_form.setReadOnly("wsc_request.hbp", false);
+			g_form.setReadOnly("wsc_request.blm_date", false);
+			g_form.setReadOnly("wsc_request.engineer_comments", false);
+
+		}
+		if ((g_form.getValue("short_description")== "Engineer Review") && g_user.hasRole("x_pinr_wsc.WSC Operations Engineer")  
+			&& g_form.getValue("active") == "true") {
+				//g_form.setMandatory("wsc_request.engineer_comments", true);
+				// operations tab
+				
+				g_form.setReadOnly("wsc_request.last_production_date", false);
+				g_form.setReadOnly("wsc_request.rig_or_w_o_last_date", false);
+				g_form.setReadOnly("wsc_request.cibp_for_ta", false);
+				g_form.setReadOnly("wsc_request.downtime_code", false);
+				g_form.setReadOnly("wsc_request.field_operations_remarks", false);
+				g_form.setReadOnly("wsc_request.resume_operations_date", false);
+				g_form.setReadOnly("wsc_request.first_production_date", false);
+				g_form.setReadOnly("wsc_request.hbp", false);
+				g_form.setReadOnly("wsc_request.blm_date", false);
+				g_form.setReadOnly("wsc_request.engineer_comments", false);
+
+				// estimated volumes tab
+				g_form.setReadOnly("wsc_request.test_date", false);
+				g_form.setReadOnly("wsc_request.bwpd", false);
+				g_form.setReadOnly("wsc_request.sitp", false);
+				g_form.setReadOnly("wsc_request.cp", false);
+				g_form.setReadOnly("wsc_request.bsw", false);
+				g_form.setReadOnly("wsc_request.gl", false);
+				g_form.setReadOnly("wsc_request.bopd", false);
+				g_form.setReadOnly("wsc_request.mcfd", false);
+				g_form.setReadOnly("wsc_request.ftp", false);
+				g_form.setReadOnly("wsc_request.choke", false);
+				g_form.setReadOnly("wsc_request.grav", false);
+				g_form.setReadOnly("wsc_request.gor", false);
+
+				// electrical tab
+				g_form.setReadOnly("wsc_request.cancel_account", false);
+				g_form.setReadOnly("wsc_request.utility_company", false);
+				g_form.setReadOnly("wsc_request.meter_num", false);
+				g_form.setReadOnly("wsc_request.utility_company_notified", false);
+				g_form.setReadOnly("wsc_request.date_notified", false);
+		}
+}]]></script_true>
+        <set_values/>
+        <short_description>WSC Task UI Policy</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-06 12:00:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>c93337001bebab402d60404ead4bcb96</sys_id>
+        <sys_mod_count>35</sys_mod_count>
+        <sys_name>WSC Task UI Policy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_ui_policy_c93337001bebab402d60404ead4bcb96</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-03-04 17:35:49</sys_updated_on>
+        <table>x_pinr_wsc_wsc_task</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

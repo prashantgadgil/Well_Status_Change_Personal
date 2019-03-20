@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Operations" section_id="b5f75606dbdfaf0018bcf8f3399619ec" sys_domain="global" table="x_pinr_wsc_wsc_task" version="3" view="">
+        <sys_ui_annotation action="INSERT_OR_UPDATE">
+            <is_plain_text>false</is_plain_text>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>923deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <text>If multiple wells have been selected, then any Engineer Comment entered here will apply to all the wells in this  Status Change.  If any specific well  needs to have its own Engineer Comment then navigate to the WSC Request, then to  WSC Request Wells tab at the bottom of the page, and edit the individual Well's Engineer comment applicable only to that well.</text>
+            <type display_value="Info Box Blue">753f88a80f930000b12e6903cfe01206</type>
+        </sys_ui_annotation>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.last_production_date</element>
+            <position>0</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>563deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.downtime_code</element>
+            <position>1</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>d63deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.rig_or_w_o_last_date</element>
+            <position>2</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>5a3deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.cibp_for_ta</element>
+            <position>3</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>da3deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.field_operations_remarks</element>
+            <position>4</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>5e3deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.resume_operations_date</element>
+            <position>5</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>de3deaec1b447f002d60404ead4bcb26</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>6</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>523deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.first_production_date</element>
+            <position>7</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>d23deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.hbp</element>
+            <position>8</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>563deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.blm_date</element>
+            <position>9</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>d63deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>923deaec1b447f002d60404ead4bcb26</element>
+            <position>10</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>5a3deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type>annotation</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.engineer_comments</element>
+            <position>11</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>da3deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>wsc_request.engineer_approval_status</element>
+            <position>12</position>
+            <sys_created_by>gadgi161</sys_created_by>
+            <sys_created_on>2019-03-04 16:41:05</sys_created_on>
+            <sys_id>5e3deaec1b447f002d60404ead4bcb27</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Operations" display_value="Operations" name="x_pinr_wsc_wsc_task" sys_domain="global" view="Default view">b5f75606dbdfaf0018bcf8f3399619ec</sys_ui_section>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-03-04 16:41:05</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Operations</caption>
+            <header>false</header>
+            <name>x_pinr_wsc_wsc_task</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>rosen768</sys_created_by>
+            <sys_created_on>2019-01-31 00:12:00</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_id>b5f75606dbdfaf0018bcf8f3399619ec</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_name>Operations</sys_name>
+            <sys_overrides display_value="">global</sys_overrides>
+            <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+            <sys_update_name>sys_ui_section_b5f75606dbdfaf0018bcf8f3399619ec</sys_update_name>
+            <sys_updated_by>gadgi161</sys_updated_by>
+            <sys_updated_on>2019-02-05 20:05:19</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

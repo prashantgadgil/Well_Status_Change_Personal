@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <description/>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+		// by default set both request well level comments to read only. They have to be entered at task Well level and then they will be copid to request well level.
+		g_form.setReadOnly("land_comments", true);
+		g_form.setReadOnly("engineer_comments", true);
+	
+// 		if ((g_form.getValue("wsc_request.stage")== "Landtech") && g_user.hasRole("x_pinr_wsc.WSC Land Tech")) {
+// 				g_form.setReadOnly("land_comments", false);
+// 		}
+// 		if ((g_form.getValue("wsc_request.stage")== "Landman") && g_user.hasRole("x_pinr_wsc.WSC Land Man")) {
+// 				g_form.setReadOnly("land_comments", false);
+// 		}
+// 		if ((g_form.getValue("wsc_request.stage")== "Engineer") && g_user.hasRole("x_pinr_wsc.WSC Operations Engineer")) {
+// 				g_form.setReadOnly("engineer_comments", false);
+// 		}
+
+}]]></script_true>
+        <set_values/>
+        <short_description>WSC Request Well UI Policy</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-11 16:19:37</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>726e92791b67e3802d60404ead4bcb74</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>WSC Request Well UI Policy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_ui_policy_726e92791b67e3802d60404ead4bcb74</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-03-04 17:16:29</sys_updated_on>
+        <table>x_pinr_wsc_wsc_request_well</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

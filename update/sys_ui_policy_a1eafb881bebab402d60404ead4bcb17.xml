@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_policy">
+    <sys_ui_policy action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conditions/>
+        <description>this policy is applied to the form of WSC request table</description>
+        <global>true</global>
+        <inherit>false</inherit>
+        <isolate_script>false</isolate_script>
+        <model_id/>
+        <model_table/>
+        <on_load>true</on_load>
+        <order>100</order>
+        <reverse_if_false>true</reverse_if_false>
+        <run_scripts>true</run_scripts>
+        <script_false><![CDATA[function onCondition() {
+
+}]]></script_false>
+        <script_true><![CDATA[function onCondition() {
+
+	if (g_form.getValue("request_status") == "Draft") {
+		g_form.addDecoration("wells", "icon-star", "Required for Submission", "color-red");
+		g_form.addDecoration("new_well_status", "icon-star", "Required for Submission", "color-red");
+		g_form.addDecoration("change_date", "icon-star", "Required for Submission", "color-red");
+		g_form.addDecoration("field_office", "icon-star", "Required for Submission", "color-red");
+		g_form.addDecoration("last_production_date", "icon-star", "Required if current status is Producing", "color-orange");
+		g_form.addDecoration("first_production_date", "icon-star", "Required if new status is Producing", "color-orange");
+		g_form.addDecoration("downtime_code", "icon-star", "Required if new well status is Shut-In, Temporarily Abandoned or Permanently Abandoned.", "color-orange");
+		g_form.addDecoration("engineer", "icon-star", "Required for submission", "color-red");
+		g_form.addDecoration("new_well_status", "icon-help","This is the new well status for the selected well(s)","color-blue");
+		g_form.addDecoration("change_date", "icon-help","Date from which this new well status is effective. ","color-blue");
+		g_form.addDecoration("field_office", "icon-help","Field office for the selected well(s).","color-blue");
+		g_form.addDecoration("downtime_code", "icon-help","Required if new well status is Shut-In, Temporarily Abandoned or Permanently Abandoned.","color-blue");
+		g_form.addDecoration("engineer", "icon-help","Select the engineer who you want to send the request to for approval.","color-blue");
+		g_form.addDecoration("last_production_date", "icon-help","Last Production Date is required if current status is Producing.","color-blue");
+		g_form.addDecoration("first_production_date", "icon-help","First Production Date is required if new status is Producing.","color-blue");
+		g_form.addDecoration("cibp_for_ta", "icon-help","CIPB for TA is required if current status is Temporarily Abandoned.","color-blue");
+	
+		g_form.addDecoration("wells", "icon-help","Select one or more wells here for which you want to submit well status change request. The well information on the right hand side will be populated when you select a well and click Populate Well Data. If you find a mistake in well data, you can correct it for this request.","color-blue");
+	
+	
+		 g_form.addInfoMessage("Submission Steps: 1. Select the wells. 2. Click Populate Well Data, 3. Enter other Well Status Change information, 4. Click Submit Request.");
+		g_form.addErrorMessage("If you see any missing or wrong information for well data, please notify the appropriate Pioneer team to correct the data in the source system for future use.");
+
+	g_form.setSectionDisplay("land", false);
+	g_form.setSectionDisplay("estimated_volumes", false);
+	g_form.setSectionDisplay("electrical", false);
+	g_form.setReadOnly("engineer_comments", true);
+
+}
+ //	g_form.setReadOnly("new_well_status", false);
+	
+	if (g_form.getValue("request_status") != "Draft") {
+ 		g_form.setReadOnly("wells", true);
+ 		g_form.setReadOnly("engineer", true);
+ 		g_form.setReadOnly("new_well_status", true);
+ 		g_form.setReadOnly("downtime_code", true);
+		g_form.setReadOnly("area", true);
+		g_form.setReadOnly("field_office", true);
+ 		g_form.setReadOnly("api", true);
+		g_form.setReadOnly("formation", true);
+		g_form.setReadOnly("change_date", true);
+		g_form.setReadOnly("from_status", true);
+		g_form.setReadOnly("foreman", true);
+		g_form.setReadOnly("county", true);
+		g_form.setReadOnly("lease_operator", true);
+
+		g_form.setReadOnly("oil", true);
+		g_form.setReadOnly("gas", true);
+		g_form.setReadOnly("swd", true);
+		g_form.setReadOnly("infill_well", true);
+		g_form.setReadOnly("federal_well", true);
+		g_form.setReadOnly("pa_agreement", true);
+		g_form.setReadOnly("flowing", true);
+		g_form.setReadOnly("pumping", true);
+		g_form.setReadOnly("esp", true);
+		g_form.setReadOnly("gas_lift", true);
+		g_form.setReadOnly("status_change_other", true);
+		
+		// land tab
+		g_form.setReadOnly("leasehold_at_risk", true);
+		g_form.setReadOnly("critical_date", true);
+		g_form.setReadOnly("cessation_days", true);
+		g_form.setReadOnly("offset_well", true);
+		g_form.setReadOnly("land_comments", true);
+		g_form.setReadOnly("landman", true);
+		g_form.setReadOnly("landtech_approval_status", true);
+		g_form.setReadOnly("landman_approval_status", true);
+
+		 // recompletion tab
+		g_form.setReadOnly("recompletion_date", true);
+		g_form.setReadOnly("old_formation_status", true);
+		g_form.setReadOnly("old_formation_name", true);
+		g_form.setReadOnly("old_formation_prop_num", true);
+	 
+		 // operations tab
+		g_form.setReadOnly("last_production_date", true);
+		g_form.setReadOnly("rig_or_w_o_last_date", true);
+		g_form.setReadOnly("cibp_for_ta", true);
+		g_form.setReadOnly("field_operations_remarks", true);
+		g_form.setReadOnly("resume_operations_date", true);
+		g_form.setReadOnly("first_production_date", true);
+		g_form.setReadOnly("hbp", true);
+		g_form.setReadOnly("blm_date", true);
+		g_form.setReadOnly("engineer_comments", true);
+
+		 // estimated volumes tab
+		g_form.setReadOnly("test_date", true);
+		g_form.setReadOnly("bwpd", true);
+		g_form.setReadOnly("sitp", true);
+		g_form.setReadOnly("cp", true);
+		g_form.setReadOnly("bsw", true);
+		g_form.setReadOnly("gl", true);
+		g_form.setReadOnly("bopd", true);
+		g_form.setReadOnly("mcfd", true);
+		g_form.setReadOnly("ftp", true);
+		g_form.setReadOnly("choke", true);
+		g_form.setReadOnly("grav", true);
+		g_form.setReadOnly("gor", true);
+
+		 // electrical tab
+		g_form.setReadOnly("cancel_account", true);
+		g_form.setReadOnly("utility_company", true);
+		g_form.setReadOnly("meter_num", true);
+		g_form.setReadOnly("utility_company_notified", true);
+		g_form.setReadOnly("date_notified", true);
+	 }
+	 if (g_form.getValue("request_status") == "Repaired") {
+			g_form.setVisible("repaired_into_wsc_request", true);
+	 }
+	 else {
+			g_form.setVisible("repaired_into_wsc_request", false);
+	 }
+ 	
+}]]></script_true>
+        <set_values/>
+        <short_description>WSC Request UI Policy</short_description>
+        <sys_class_name>sys_ui_policy</sys_class_name>
+        <sys_created_by>gadgi161</sys_created_by>
+        <sys_created_on>2019-02-06 12:33:17</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_id>a1eafb881bebab402d60404ead4bcb17</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>WSC Request UI Policy</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_ui_policy_a1eafb881bebab402d60404ead4bcb17</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-03-04 16:55:10</sys_updated_on>
+        <table>x_pinr_wsc_wsc_request</table>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_ui_policy>
+</record_update>

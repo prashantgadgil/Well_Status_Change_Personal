@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_email">
+    <sys_script_email action="INSERT_OR_UPDATE">
+        <name>wsc_request_table_summary</name>
+        <new_lines_to_html>false</new_lines_to_html>
+        <script><![CDATA[(function runMailScript(/* GlideRecord */ current, /* TemplatePrinter */ template,
+/* Optional EmailOutbound */ email, /* Optional GlideRecord */ email_action,
+/* Optional GlideRecord */ event) {
+	
+	// Add your code here
+//gs.info("Inside Email Scrit wsc_request_table_summary - should be sending it!!!!");
+	var wsc_table = current;
+	var list = current.wells.toString();
+	var array = list.split(",");
+	template.print("<table class='nth-table-number'>");
+//	template.print('<table class="MsoNormalTable" style="width: 100.0%; border-collapse: collapse;" border="0" width="100%" cellspacing="0" cellpadding="0">');
+	template.print('<tbody>');
+// 	template.print('<tr style="height: 15.0pt;">');
+//  	template.print('<td colspan="7">');
+// 	template.print('<p><strong><span>Wells Changing Status </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('</tr>');
+// 	template.print('<tr style="height: 14.25pt;">');
+// 	template.print('</td>');
+// 	template.print('</tr>');
+
+	template.print('<tr style="height: 15.0pt;">');
+	template.print('<td style="border: solid #00407A 1.0pt; border-bottom: solid #CCD9E4 1.0pt; background: #00407A; padding: 0in 7.5pt 0in 3.75pt; height: 15.0pt;" colspan="7">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 10.0pt; font-family: \'Arial\',sans-serif; color: #bfcfde;">Wells Changing Status </span></strong></p>');
+	template.print('</td>');
+	template.print('</tr>');
+	template.print('<tr style="height: 14.25pt;">');
+	template.print('<td style="width: 20.0%; border: solid #CCD9E4 1.0pt; border-top: none; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">Well </span></strong></p>');
+	template.print('</td>');
+	template.print('<td style="width: 20.0%; border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">Division </span></strong></p>');
+	template.print('</td>');
+	template.print('<td style="width: 20.0%; border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">Area </span></strong></p>');
+	template.print('</td>');
+	template.print('<td style="width: 20.0%; border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">Prior Status </span></strong></p>');
+	template.print('</td>');
+	template.print('<td style="width: 20.0%; border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">Location </span></strong></p>');
+	template.print('</td>');
+	template.print('<td style="width: 20.0%; border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">API </span></strong></p>');
+	template.print('</td>');
+	template.print('<td style="width: 20.0%; border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: #E5ECF1; padding: 0in 0in 0in 3.75pt; height: 14.25pt;" width="20%">');
+	template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">Details </span></strong></p>');
+	
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>Well </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>Division </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>Area </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>Prior Status </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>Location </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>API </span></strong></p>');
+// 	template.print('</td>');
+// 	template.print('<td>');
+// 	template.print('<p><strong><span>Details </span></strong></p>');
+	
+	template.print('</td>');
+	template.print('</tr>');
+	//if(array.length == 1) {
+	var instanceName = gs.getProperty("instance_name");
+		for(var i = 0; i < array.length; i++ ) {
+			var gr = new GlideRecord('x_pinr_wsc_wsc_request_well');
+			gr.newRecord();
+			gr.initialize();
+			gr.well = array[i];
+			var requestURL = "https://" + instanceName +  ".service-now.com/x_pinr_wsc_wsc_request.do?sys_id=" + current.sys_id;
+			var attachLink = '<a href="' + requestURL + '">' + "WellStatusChange-" + current.number + '</a>';
+			
+			//template.print(attachLink);
+// 			template.print('<tr>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span>' + gr.well.name + '</span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span>' + gr.well.division.display_name + '</span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span>' + gr.well.area.display_name + '</span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span>' + gr.well.well_status.display_name + '</span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span>' + gr.well.location + '</span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span>' + gr.well.api + '</span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('<td>');
+// 			template.print('<p><strong><span><span style="color: #00407a;"' + attachLink + '</span></a></span></strong></p>');
+// 			template.print('</td>');
+// 			template.print('</tr>');
+			
+			template.print('<tr style="height: 14.25pt;">');
+			template.print('<td style="border: solid #CCD9E4 1.0pt; border-top: none; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">' + gr.well.name + '</span></strong></p>');
+			template.print('</td>');
+			template.print('<td style="border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">' + gr.well.division.display_name + '</span></strong></p>');
+			template.print('</td>');
+			template.print('<td style="border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">' + gr.well.area.display_name + '</span></strong></p>');
+			template.print('</td>');
+			template.print('<td style="border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">' + gr.well.well_status.display_name + '</span></strong></p>');
+			template.print('</td>');
+			template.print('<td style="border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">' + gr.well.location + '</span></strong></p>');
+			template.print('</td>');
+			template.print('<td style="border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;">' + gr.well.api + '</span></strong></p>');
+			template.print('</td>');
+			template.print('<td style="border-top: none; border-left: none; border-bottom: solid #CCD9E4 1.0pt; border-right: solid #CCD9E4 1.0pt; background: white; padding: 0in 0in 0in 3.75pt; height: 14.25pt;">');
+			template.print('<p style="margin: 0in 0in 0.0001pt; font-size: 12pt; font-family: \'Times New Roman\', serif;"><strong><span style="font-size: 8.5pt; font-family: \'Arial\',sans-serif; color: #00407a;"><span style="color: #00407a;"' + attachLink + '</span></a></span></strong></p>');
+			template.print('</td>');
+			template.print('</tr>');
+		}
+		
+		template.print('</tbody>');
+		template.print('</table>');
+		
+		template.print("<br><br>");
+	
+	if (gs.getProperty("instance_name") != "pioneer") {
+		template.print("<br><br><br>Footer:<br>"); 	
+		template.print("If this email had been sent in production, it would have been sent to the submitter of this request:<br>") ;
+		template.print(current.opened_by.email.toString() + "<br>");
+	}	
+		
+		
+	})(current, template, email, email_action, event);]]></script>
+        <sys_class_name>sys_script_email</sys_class_name>
+        <sys_created_by>rosen768</sys_created_by>
+        <sys_created_on>2019-01-16 14:23:28</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f89a0ced1303a700dd9251522244b06e</sys_id>
+        <sys_mod_count>51</sys_mod_count>
+        <sys_name>wsc_request_table_summary</sys_name>
+        <sys_package display_value="Well Status Change" source="x_pinr_wsc">09863b231306ab00dd9251522244b01c</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Well Status Change">09863b231306ab00dd9251522244b01c</sys_scope>
+        <sys_update_name>sys_script_email_f89a0ced1303a700dd9251522244b06e</sys_update_name>
+        <sys_updated_by>gadgi161</sys_updated_by>
+        <sys_updated_on>2019-03-19 14:14:01</sys_updated_on>
+    </sys_script_email>
+</record_update>
